@@ -12,8 +12,8 @@
     ],
     "require": {
         "symfony/framework-bundle": "2.*",
-        "knplabs/knp-menu": ">=1.0",
-        "knplabs/knp-menu-bundle": "1.1.*",
+        "knplabs/knp-menu": "dev-master",
+        "knplabs/knp-menu-bundle": "dev-master",
         "symfony-cmf/routing-extra-bundle": "dev-master",
         "stof/doctrine-extensions-bundle": ">=1.0"
     },
