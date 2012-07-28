@@ -15,13 +15,16 @@ class PageType extends AbstractType
         $builder->add('routes', 'collection', array('type' => new RouteType()));
     }
 
-    public function getDefaultOptions()
+    /**
+     * {@inheritdoc}
+     */
+    public function getDefaultOptions(array $options)
     {
         return array(
             'data_class' => 'Koala\ContentBundle\Entity\Page',
         );
     }
-
+    
     public function getName()
     {
         return 'page';
