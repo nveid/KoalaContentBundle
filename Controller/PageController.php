@@ -45,7 +45,7 @@ class PageController extends SecuredController
         $form->bindRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $em->persist($menuItem);
             $em->flush();
 
@@ -82,7 +82,7 @@ class PageController extends SecuredController
         $form->bindRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $em->flush();
 
             return $this->redirect($this->generateUrl(null, array('content'=>$menuItem->getPage())));
@@ -98,7 +98,7 @@ class PageController extends SecuredController
         }
 
         $page = $this->getPage($page_id);
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $em->remove($page);
         $em->flush();
 

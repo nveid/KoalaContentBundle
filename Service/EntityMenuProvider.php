@@ -40,7 +40,7 @@ class EntityMenuProvider implements MenuProviderInterface
             throw new \InvalidArgumentException(sprintf('The menu "%s" is not defined.', $name));
         
         $menu = $this->factory->createFromNode($node); 
-        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+       //  $menu->setCurrentUri($this->container->get('request')->getRequestUri());
 
         return $menu;
     }

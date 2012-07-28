@@ -10,6 +10,7 @@ class MenuItemType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
         $builder->add('parent', 'entity', array(
             'class'=>'KoalaContentBundle:MenuItem',
             'query_builder' =>
@@ -18,6 +19,7 @@ class MenuItemType extends AbstractType
                 }
             )
         );
+
         $builder->add('label');
         $builder->add('page', new PageType());
     }
